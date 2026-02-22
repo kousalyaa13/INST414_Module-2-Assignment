@@ -4,6 +4,7 @@ import re
 import pandas as pd
 import time
 from urllib.parse import urlparse
+import os
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
@@ -14,10 +15,15 @@ bad_headers = {
     "Contact",
     "Information",
     "Follow Us",
-    "Matching Careers"
+    "Matching Careers",
     "Character Traits",
     "Educational Path",
-    "Attractive Career Options for Introverts"
+    "Attractive Career Options for Introverts",
+    "Trending Stories",
+    "Photostories",
+    "TOI",
+    "Visual Stories",
+    "Track your credit score with SoFi"
 }
 
 bad_words = [
@@ -93,10 +99,8 @@ def scrape_jobs_from_url(url: str, tag_name: str) -> list[str]:
 
     return unique_jobs
 
-
 if __name__ == "__main__":
     sources = pd.read_csv("sources.csv")
-
     all_rows = []
 
     for _, row in sources.iterrows():
@@ -124,8 +128,41 @@ if __name__ == "__main__":
         except Exception as e:
             print(f"  Error scraping {url}: {e}")
 
-        time.sleep(1.5)  # be polite
+        time.sleep(1.5)
 
-    df = pd.DataFrame(all_rows)
-    df.to_csv("job_edges_raw.csv", index=False)
-    print("\nSaved to job_edges_raw.csv")
+    output_file = "job_edges_raw.csv"
+
+# after loop: build dataframe
+new_df = pd.DataFrame(all_rows).drop_duplicates()
+
+if os.path.exists(output_file):
+    existing_df = pd.read_csv(output_file, usecols=["personality", "job", "source"])
+
+    # build a key to detect duplicates
+    existing_keys = set(
+        existing_df["personality"].astype(str).str.lower().str.strip()
+        + "||" +
+        existing_df["job"].astype(str).str.lower().str.strip()
+        + "||" +
+        existing_df["source"].astype(str).str.lower().str.strip()
+    )
+
+    new_keys = (
+        new_df["personality"].astype(str).str.lower().str.strip()
+        + "||" +
+        new_df["job"].astype(str).str.lower().str.strip()
+        + "||" +
+        new_df["source"].astype(str).str.lower().str.strip()
+    )
+
+    to_add = new_df[~new_keys.isin(existing_keys)]
+
+    if len(to_add) > 0:
+        to_add.to_csv(output_file, mode="a", header=False, index=False)
+        print(f"\nAppended {len(to_add)} new rows to job_edges_raw.csv")
+    else:
+        print("\nNo new rows to append (all duplicates).")
+
+else:
+    new_df.to_csv(output_file, index=False)
+    print("\nCreated job_edges_raw.csv")

@@ -11,10 +11,15 @@ bad_headers = {
     "Contact",
     "Information",
     "Follow Us",
-    "Matching Careers"
+    "Matching Careers",
     "Character Traits",
     "Educational Path",
-    "Attractive Career Options for Introverts"
+    "Attractive Career Options for Introverts",
+    "Trending Stories",
+    "Photostories",
+    "TOI",
+    "Visual Stories",
+    "Track your credit score with SoFi"
 }
 
 bad_words = [
@@ -66,7 +71,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
     soup = BeautifulSoup(r.text, "html.parser")
 
     jobs = []
-    for tag in soup.find_all(["h4"]):
+    for tag in soup.find_all(["h3"]):
         text = tag.get_text(strip=True)
         text = re.sub(r"^\d+[\.\)]\s*", "", text)  # remove numbering like "1. Job"
         if is_job_heading(text):
@@ -85,7 +90,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
 
 
 if __name__ == "__main__":
-    url = "https://blog.steppingblocks.com/15-best-jobs-for-introverts-in-2021"
+    url = "https://www.sofi.com/learn/content/low-stress-jobs-for-introverts-with-anxiety/"
     jobs = scrape_jobs_from_url(url)
 
     print(f"  Found {len(jobs)} jobs")
