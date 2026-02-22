@@ -3,12 +3,9 @@
 2) 12
 3) 15
 4) 23
+5) 7
+6) 30
+7)
 
 
 ## missing info
-source 4 add
-- introvert,UX Designer,www.coursera.org
-source 4 remove Â
-- introvert,VeterinarianÂ,www.coursera.org
-- introvert,InterpreterÂ,www.coursera.org
-

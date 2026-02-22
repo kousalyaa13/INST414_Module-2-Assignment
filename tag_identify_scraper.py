@@ -6,6 +6,9 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
 }
 
+PROCESSED_FILE = "processed_urls.txt"
+OUTPUT_FILE = "job_edges_raw.csv"
+
 bad_headers = {
     "Related Articles",
     "Contact",
@@ -35,6 +38,35 @@ BAD_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(w) + "s?" for w in bad_words) + r")\b",
     re.IGNORECASE
 )
+
+def load_processed_urls(path: str) -> set[str]:
+    if not os.path.exists(path):
+        return set()
+    with open(path, "r", encoding="utf-8") as f:
+        return {line.strip() for line in f if line.strip()}
+
+def mark_url_processed(path: str, url: str) -> None:
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(url.strip() + "\n")
+
+def normalize_job_text(text: str) -> str:
+    """
+    Cleans common mojibake / weird whitespace.
+    Example: "VeterinarianÂ" or "VeterinarianÂ " -> "Veterinarian"
+    """
+    if text is None:
+        return ""
+    t = str(text)
+
+    # common bad characters from encoding issues
+    t = t.replace("\u00a0", " ")   # NBSP
+    t = t.replace("Â", "")         # mojibake artifact often before NBSP
+
+    # normalize unicode and collapse whitespace
+    t = unicodedata.normalize("NFKC", t)
+    t = " ".join(t.split())
+
+    return t.strip()
 
 def contains_bad_word(text: str) -> bool:
     return bool(BAD_PATTERN.search(text))
