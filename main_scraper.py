@@ -9,14 +9,33 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
 }
 
-BAD_HEADINGS = {
+bad_headers = {
     "Related Articles",
     "Contact",
     "Information",
     "Follow Us",
-    "Matching Careers, Character Traits and Educational Path",
-    "Seven Attractive Career Options for Introverts"
+    "Matching Careers"
+    "Character Traits",
+    "Educational Path",
+    "Attractive Career Options for Introverts"
 }
+
+bad_words = [
+    "guide", "event", "case",
+    "diversity", "mission", "hub", "study",
+    "article", "blog", "contact",
+    "introvert", "extrovert", "career",
+    "follow", "related",
+    "path"
+]
+
+BAD_PATTERN = re.compile(
+    r"\b(" + "|".join(re.escape(w) + "s?" for w in bad_words) + r")\b",
+    re.IGNORECASE
+)
+
+def contains_bad_word(text: str) -> bool:
+    return bool(BAD_PATTERN.search(text))
 
 def is_job_heading(text: str) -> bool:
     text = (text or "").strip()
@@ -30,26 +49,19 @@ def is_job_heading(text: str) -> bool:
     if text.endswith("?"):
         return False
 
-    # explicit blacklist
-    if text in BAD_HEADINGS:
-        return False
-
-    # drop anything that sounds like a section label
-    bad_words = ["guides", "event", "case",
-                 "diversity", "mission", "hub", "study"
-                 "articles", "blog", "contact", 
-                 "introvert", "extrovert", "careers"
-                 "information", "follow", "related", 
-                 "path"]
-    if any(w in lower for w in bad_words):
+    # exact blacklist
+    if text in bad_headers:
         return False
 
     # reject headings that look like full sentences
     if lower.count(" ") > 5:
         return False
 
-    return True
+    # drop anything that sounds like a section label (singular/plural)
+    if contains_bad_word(text):
+        return False
 
+    return True
 
 def scrape_jobs_from_url(url: str, tag_name: str) -> list[str]:
     """
