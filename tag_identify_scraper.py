@@ -52,7 +52,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
     soup = BeautifulSoup(r.text, "html.parser")
 
     jobs = []
-    for tag in soup.find_all(["h3"]):
+    for tag in soup.find_all(["h4"]):
         text = tag.get_text(strip=True)
         text = re.sub(r"^\d+[\.\)]\s*", "", text)  # remove numbering like "1. Job"
         if is_job_heading(text):
@@ -71,9 +71,9 @@ def scrape_jobs_from_url(url: str) -> list[str]:
 
 
 if __name__ == "__main__":
-    url = "https://www.multiverse.io/en-GB/blog/best-jobs-for-introverts"
+    url = "https://blog.steppingblocks.com/15-best-jobs-for-introverts-in-2021"
     jobs = scrape_jobs_from_url(url)
 
-    print("Jobs found:")
+    print(f"  Found {len(jobs)} jobs")
     for j in jobs:
         print("-", j)

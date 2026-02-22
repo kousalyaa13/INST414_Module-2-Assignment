@@ -35,14 +35,12 @@ def is_job_heading(text: str) -> bool:
         return False
 
     # drop anything that sounds like a section label
-    bad_words = [
-        "research", "guides", "event", "case",
-        "diversity", "mission", "hub", "study",
-        "articles", "blog", "contact",
-        "introvert", "extrovert", "career",
-        "information", "follow", "related",
-        "path"
-    ]
+    bad_words = ["guides", "event", "case",
+                 "diversity", "mission", "hub", "study"
+                 "articles", "blog", "contact", 
+                 "introvert", "extrovert", "careers"
+                 "information", "follow", "related", 
+                 "path"]
     if any(w in lower for w in bad_words):
         return False
 
