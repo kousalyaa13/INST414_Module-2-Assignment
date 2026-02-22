@@ -1,0 +1,358 @@
+source,target,weight
+extrovert,actor,3
+extrovert,addictions professional,1
+extrovert,administrative services manager,2
+extrovert,administrative specialist,1
+extrovert,advertising manager,1
+extrovert,advisor,1
+extrovert,agent,2
+extrovert,architect,1
+extrovert,arts administrator,1
+extrovert,attorney,1
+extrovert,bartender,1
+extrovert,beautician,1
+extrovert,broadcaster,1
+extrovert,business,1
+extrovert,business consultant,1
+extrovert,business management,2
+extrovert,call center operator,1
+extrovert,car dealer,1
+extrovert,career counselor,1
+extrovert,ccommodity trader,1
+extrovert,chief executive officer,1
+extrovert,clinical psychologist,1
+extrovert,coach,1
+extrovert,college professor,1
+extrovert,community health professional,1
+extrovert,community outreach coordinator,1
+extrovert,computer systems analyst,1
+extrovert,computer systems manager,1
+extrovert,construction manager,4
+extrovert,consultant,1
+extrovert,consulting,1
+extrovert,content strategist,1
+extrovert,corporate trainer,1
+extrovert,cosmetologist,1
+extrovert,counseling psychologist,1
+extrovert,counselor,3
+extrovert,creative director,1
+extrovert,criminal investigator,1
+extrovert,customer service representative,5
+extrovert,customer service specialist,1
+extrovert,customer success manager,1
+extrovert,dental hygienist,3
+extrovert,dentist,2
+extrovert,digital marketing specialist,1
+extrovert,education,2
+extrovert,entertainment,1
+extrovert,entrepreneur,3
+extrovert,event coordinator,2
+extrovert,event planner,9
+extrovert,event planning,1
+extrovert,executive coach,1
+extrovert,fashion designer,1
+extrovert,financial advisor,4
+extrovert,financial manager,1
+extrovert,financial trader,1
+extrovert,fitness instructor,3
+extrovert,flight attendant,7
+extrovert,franchise-owner,1
+extrovert,fundraising manager,1
+extrovert,general manager,1
+extrovert,genetic counselor,1
+extrovert,hair stylist,1
+extrovert,hairstyler,1
+extrovert,hairstylist,2
+extrovert,health care worker,1
+extrovert,health service manager,1
+extrovert,healthcare,1
+extrovert,help desk technician,1
+extrovert,hospitality,1
+extrovert,hospitality manager,3
+extrovert,hotel manager,1
+extrovert,hr manager,1
+extrovert,human resource manager,6
+extrovert,human resources,2
+extrovert,human resources advisor,1
+extrovert,human resources officer,1
+extrovert,industrial engineer,1
+extrovert,industrial-organizational psychologists,1
+extrovert,insurance sales agent,1
+extrovert,journalist,3
+extrovert,judge,1
+extrovert,k-12 teacher,1
+extrovert,law,1
+extrovert,lawyer,10
+extrovert,librarian,1
+extrovert,life coach,2
+extrovert,literary agent,1
+extrovert,lobbyist,1
+extrovert,management consultant,1
+extrovert,manager,1
+extrovert,marketing,1
+extrovert,marketing manager,7
+extrovert,marriage and family therapists,1
+extrovert,mechanical engineer,1
+extrovert,media,1
+extrovert,mediator,3
+extrovert,medical and health services manager,2
+extrovert,medical assistant,1
+extrovert,medical manager,1
+extrovert,medical office assistant,1
+extrovert,medication care coordinator,1
+extrovert,natural sciences manager,2
+extrovert,nonprofit director,1
+extrovert,nurse,3
+extrovert,nurse practitioner,4
+extrovert,occupational therapist,2
+extrovert,occupational therapy assistant,1
+extrovert,operations manager,1
+extrovert,orthodontist,1
+extrovert,patient care technician,1
+extrovert,performer,4
+extrovert,personal financial advisor,1
+extrovert,pharmaceutical sales rep,1
+extrovert,pharmacy assistant,1
+extrovert,physical therapist,3
+extrovert,physical therapists assistant,1
+extrovert,physical therapy aide,1
+extrovert,physician assistant,3
+extrovert,pilot,1
+extrovert,police officer,1
+extrovert,political consultant,1
+extrovert,politician,3
+extrovert,postsecondary health specialties teacher,1
+extrovert,postsecondary nursing instructor,1
+extrovert,pr manager,1
+extrovert,producers and directors,1
+extrovert,product manager,3
+extrovert,professor,1
+extrovert,project manager,1
+extrovert,psychiatrist,1
+extrovert,psychologist,2
+extrovert,public relations,2
+extrovert,public relations manager,3
+extrovert,public relations officer,2
+extrovert,public relations specialist,8
+extrovert,real estate agent,8
+extrovert,realtor,1
+extrovert,recruiter,9
+extrovert,recruitment consultant,1
+extrovert,recruitment officer,1
+extrovert,registered nurse,6
+extrovert,relationship manager,1
+extrovert,restaurant manager,1
+extrovert,restaurant server,1
+extrovert,retail store manager,2
+extrovert,sales,2
+extrovert,sales associate,1
+extrovert,sales engineer,1
+extrovert,sales lead,1
+extrovert,sales manager,5
+extrovert,sales representative,9
+extrovert,salesperson,3
+extrovert,security trader,1
+extrovert,server,1
+extrovert,singer,1
+extrovert,social and community service,1
+extrovert,social media coordinator,1
+extrovert,social media manager,3
+extrovert,social media specialist,1
+extrovert,social worker,2
+extrovert,speech language pathologist,1
+extrovert,speech pathologist,1
+extrovert,sports agent,1
+extrovert,surgical technologists,1
+extrovert,talent agent,1
+extrovert,talent manager,1
+extrovert,teacher,10
+extrovert,teaching,1
+extrovert,tech recruiter,1
+extrovert,tour guide,1
+extrovert,tourism,1
+extrovert,travel writer,1
+extrovert,ultrasound technician,1
+extrovert,urban planner,1
+extrovert,ux designer,2
+extrovert,wedding planner,1
+extrovert,writer,1
+introvert,accountant,10
+introvert,actuary,2
+introvert,admin,1
+introvert,airline pilot,1
+introvert,animal care options,1
+introvert,animal trainer,1
+introvert,animator,1
+introvert,architect,1
+introvert,archival roles,1
+introvert,archivist,5
+introvert,artist,3
+introvert,author,1
+introvert,back-office operations,1
+introvert,biological technician,1
+introvert,bookkeeper,4
+introvert,bookkeeping,1
+introvert,bookkeeping assistant,1
+introvert,budget analyst,1
+introvert,business analyst,1
+introvert,call center operator,1
+introvert,calligrapher,1
+introvert,carpenter,1
+introvert,ceramic artist,1
+introvert,closed captioner,1
+introvert,cloud engineer,1
+introvert,commercial airline pilot,1
+introvert,computer programmer,1
+introvert,conservation scientist,1
+introvert,consultant,2
+introvert,content creator,2
+introvert,content marketing manager,1
+introvert,content writer,1
+introvert,controller,1
+introvert,copy editor,1
+introvert,counselor,1
+introvert,craft artist,1
+introvert,criminologist,1
+introvert,customer support,1
+introvert,cybersecurity analyst,2
+introvert,cybersecurity engineer,1
+introvert,data analyst,9
+introvert,data architect,1
+introvert,data engineer,1
+introvert,data entry,3
+introvert,data entry clerk,1
+introvert,data entry specialist,4
+introvert,data scientist,4
+introvert,delivery driver,1
+introvert,delivery driving,1
+introvert,delivery truck driver,1
+introvert,design,1
+introvert,dietitian,1
+introvert,digital designer,2
+introvert,dog walker,3
+introvert,drafter,1
+introvert,driver,1
+introvert,editing,1
+introvert,editor,1
+introvert,editor or technical writer,1
+introvert,electrician,1
+introvert,engineer,2
+introvert,environmental scientist,1
+introvert,farmer,1
+introvert,film editor,1
+introvert,financial analyst,1
+introvert,financial manager,1
+introvert,financing,1
+introvert,floral designer,1
+introvert,freelance bookkeeping,1
+introvert,freelance writer,2
+introvert,freelance writing,1
+introvert,freelancer,2
+introvert,gardener,2
+introvert,gigs,1
+introvert,graphic designer,6
+introvert,graphic illustrator,1
+introvert,hand sewer,1
+introvert,handmade goods creator,1
+introvert,health service manager,1
+introvert,help desk technician,1
+introvert,human resource manager,1
+introvert,hvac technician,1
+introvert,illustrator,2
+introvert,independent creator,1
+introvert,industrial machinery mechanic,1
+introvert,information security analyst,1
+introvert,insurance,1
+introvert,interpreter,2
+introvert,it manager,1
+introvert,it specialist,1
+introvert,laboratory technician,2
+introvert,landscape architect,1
+introvert,landscaper,3
+introvert,lawyer,2
+introvert,lettering artist,1
+introvert,librarian,6
+introvert,library assistant,1
+introvert,library roles,1
+introvert,market research analyst,2
+introvert,marketing manager,2
+introvert,massage therapist,1
+introvert,mechanic,2
+introvert,medical coding,1
+introvert,medical scientist,2
+introvert,medical transcriptionist,2
+introvert,music composer,1
+introvert,night guard,1
+introvert,night security,1
+introvert,non-phone customer support (chat/email),1
+introvert,organic farmer,1
+introvert,paralegal,2
+introvert,park ranger,2
+introvert,pathologist,1
+introvert,personal trainer,1
+introvert,pet groomer,2
+introvert,pet grooming,1
+introvert,pet sitter,1
+introvert,photographer,3
+introvert,physician,1
+introvert,physician assistant,2
+introvert,pipefitter,1
+introvert,plumber,2
+introvert,portfolio compliance specialist,1
+introvert,postal service worker,1
+introvert,producer,1
+introvert,product manager,1
+introvert,programmer,1
+introvert,project manager,2
+introvert,proofreader,2
+introvert,proofreading,1
+introvert,psychiatrist,1
+introvert,psychologist,7
+introvert,rancher,1
+introvert,real estate agent,1
+introvert,remote data entry,2
+introvert,research scientist,2
+introvert,researcher,1
+introvert,restaurant server,1
+introvert,retail stocker,2
+introvert,roofer,1
+introvert,sales representative,1
+introvert,scientist,1
+introvert,sculptor,1
+introvert,security,1
+introvert,social media manager,4
+introvert,social scientist,1
+introvert,social worker,3
+introvert,software developer,6
+introvert,software engineer,3
+introvert,software quality assurance analyst,1
+introvert,steamfitter,1
+introvert,stocker,1
+introvert,surveying and mapping technician,1
+introvert,systems engineer,1
+introvert,tattoo artist,1
+introvert,teacher,2
+introvert,tech support,1
+introvert,technical roles,1
+introvert,technical writer,4
+introvert,technical writing,2
+introvert,tester,1
+introvert,therapist,2
+introvert,transcriptionist,5
+introvert,translator,2
+introvert,truck driver,1
+introvert,ui,1
+introvert,ux,1
+introvert,ux designer,6
+introvert,veterinarian,2
+introvert,veterinary care assistant,1
+introvert,video editor,1
+introvert,virtual assistant,1
+introvert,warehouse associate,2
+introvert,warehouse worker,1
+introvert,web designer,1
+introvert,web developer,5
+introvert,welder,1
+introvert,writer,9
+introvert,writer/author,1
+introvert,x-ray technician,1

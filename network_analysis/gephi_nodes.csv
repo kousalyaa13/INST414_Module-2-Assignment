@@ -1,0 +1,336 @@
+id,label,type
+extrovert,extrovert,personality
+introvert,introvert,personality
+accountant,accountant,job
+actor,actor,job
+actuary,actuary,job
+addictions professional,addictions professional,job
+admin,admin,job
+administrative services manager,administrative services manager,job
+administrative specialist,administrative specialist,job
+advertising manager,advertising manager,job
+advisor,advisor,job
+agent,agent,job
+airline pilot,airline pilot,job
+animal care options,animal care options,job
+animal trainer,animal trainer,job
+animator,animator,job
+architect,architect,job
+archival roles,archival roles,job
+archivist,archivist,job
+artist,artist,job
+arts administrator,arts administrator,job
+attorney,attorney,job
+author,author,job
+back-office operations,back-office operations,job
+bartender,bartender,job
+beautician,beautician,job
+biological technician,biological technician,job
+bookkeeper,bookkeeper,job
+bookkeeping,bookkeeping,job
+bookkeeping assistant,bookkeeping assistant,job
+broadcaster,broadcaster,job
+budget analyst,budget analyst,job
+business,business,job
+business analyst,business analyst,job
+business consultant,business consultant,job
+business management,business management,job
+call center operator,call center operator,job
+calligrapher,calligrapher,job
+car dealer,car dealer,job
+career counselor,career counselor,job
+carpenter,carpenter,job
+ccommodity trader,ccommodity trader,job
+ceramic artist,ceramic artist,job
+chief executive officer,chief executive officer,job
+clinical psychologist,clinical psychologist,job
+closed captioner,closed captioner,job
+cloud engineer,cloud engineer,job
+coach,coach,job
+college professor,college professor,job
+commercial airline pilot,commercial airline pilot,job
+community health professional,community health professional,job
+community outreach coordinator,community outreach coordinator,job
+computer programmer,computer programmer,job
+computer systems analyst,computer systems analyst,job
+computer systems manager,computer systems manager,job
+conservation scientist,conservation scientist,job
+construction manager,construction manager,job
+consultant,consultant,job
+consulting,consulting,job
+content creator,content creator,job
+content marketing manager,content marketing manager,job
+content strategist,content strategist,job
+content writer,content writer,job
+controller,controller,job
+copy editor,copy editor,job
+corporate trainer,corporate trainer,job
+cosmetologist,cosmetologist,job
+counseling psychologist,counseling psychologist,job
+counselor,counselor,job
+craft artist,craft artist,job
+creative director,creative director,job
+criminal investigator,criminal investigator,job
+criminologist,criminologist,job
+customer service representative,customer service representative,job
+customer service specialist,customer service specialist,job
+customer success manager,customer success manager,job
+customer support,customer support,job
+cybersecurity analyst,cybersecurity analyst,job
+cybersecurity engineer,cybersecurity engineer,job
+data analyst,data analyst,job
+data architect,data architect,job
+data engineer,data engineer,job
+data entry,data entry,job
+data entry clerk,data entry clerk,job
+data entry specialist,data entry specialist,job
+data scientist,data scientist,job
+delivery driver,delivery driver,job
+delivery driving,delivery driving,job
+delivery truck driver,delivery truck driver,job
+dental hygienist,dental hygienist,job
+dentist,dentist,job
+design,design,job
+dietitian,dietitian,job
+digital designer,digital designer,job
+digital marketing specialist,digital marketing specialist,job
+dog walker,dog walker,job
+drafter,drafter,job
+driver,driver,job
+editing,editing,job
+editor,editor,job
+editor or technical writer,editor or technical writer,job
+education,education,job
+electrician,electrician,job
+engineer,engineer,job
+entertainment,entertainment,job
+entrepreneur,entrepreneur,job
+environmental scientist,environmental scientist,job
+event coordinator,event coordinator,job
+event planner,event planner,job
+event planning,event planning,job
+executive coach,executive coach,job
+farmer,farmer,job
+fashion designer,fashion designer,job
+film editor,film editor,job
+financial advisor,financial advisor,job
+financial analyst,financial analyst,job
+financial manager,financial manager,job
+financial trader,financial trader,job
+financing,financing,job
+fitness instructor,fitness instructor,job
+flight attendant,flight attendant,job
+floral designer,floral designer,job
+franchise-owner,franchise-owner,job
+freelance bookkeeping,freelance bookkeeping,job
+freelance writer,freelance writer,job
+freelance writing,freelance writing,job
+freelancer,freelancer,job
+fundraising manager,fundraising manager,job
+gardener,gardener,job
+general manager,general manager,job
+genetic counselor,genetic counselor,job
+gigs,gigs,job
+graphic designer,graphic designer,job
+graphic illustrator,graphic illustrator,job
+hair stylist,hair stylist,job
+hairstyler,hairstyler,job
+hairstylist,hairstylist,job
+hand sewer,hand sewer,job
+handmade goods creator,handmade goods creator,job
+health care worker,health care worker,job
+health service manager,health service manager,job
+healthcare,healthcare,job
+help desk technician,help desk technician,job
+hospitality,hospitality,job
+hospitality manager,hospitality manager,job
+hotel manager,hotel manager,job
+hr manager,hr manager,job
+human resource manager,human resource manager,job
+human resources,human resources,job
+human resources advisor,human resources advisor,job
+human resources officer,human resources officer,job
+hvac technician,hvac technician,job
+illustrator,illustrator,job
+independent creator,independent creator,job
+industrial engineer,industrial engineer,job
+industrial machinery mechanic,industrial machinery mechanic,job
+industrial-organizational psychologists,industrial-organizational psychologists,job
+information security analyst,information security analyst,job
+insurance,insurance,job
+insurance sales agent,insurance sales agent,job
+interpreter,interpreter,job
+it manager,it manager,job
+it specialist,it specialist,job
+journalist,journalist,job
+judge,judge,job
+k-12 teacher,k-12 teacher,job
+laboratory technician,laboratory technician,job
+landscape architect,landscape architect,job
+landscaper,landscaper,job
+law,law,job
+lawyer,lawyer,job
+lettering artist,lettering artist,job
+librarian,librarian,job
+library assistant,library assistant,job
+library roles,library roles,job
+life coach,life coach,job
+literary agent,literary agent,job
+lobbyist,lobbyist,job
+management consultant,management consultant,job
+manager,manager,job
+market research analyst,market research analyst,job
+marketing,marketing,job
+marketing manager,marketing manager,job
+marriage and family therapists,marriage and family therapists,job
+massage therapist,massage therapist,job
+mechanic,mechanic,job
+mechanical engineer,mechanical engineer,job
+media,media,job
+mediator,mediator,job
+medical and health services manager,medical and health services manager,job
+medical assistant,medical assistant,job
+medical coding,medical coding,job
+medical manager,medical manager,job
+medical office assistant,medical office assistant,job
+medical scientist,medical scientist,job
+medical transcriptionist,medical transcriptionist,job
+medication care coordinator,medication care coordinator,job
+music composer,music composer,job
+natural sciences manager,natural sciences manager,job
+night guard,night guard,job
+night security,night security,job
+non-phone customer support (chat/email),non-phone customer support (chat/email),job
+nonprofit director,nonprofit director,job
+nurse,nurse,job
+nurse practitioner,nurse practitioner,job
+occupational therapist,occupational therapist,job
+occupational therapy assistant,occupational therapy assistant,job
+operations manager,operations manager,job
+organic farmer,organic farmer,job
+orthodontist,orthodontist,job
+paralegal,paralegal,job
+park ranger,park ranger,job
+pathologist,pathologist,job
+patient care technician,patient care technician,job
+performer,performer,job
+personal financial advisor,personal financial advisor,job
+personal trainer,personal trainer,job
+pet groomer,pet groomer,job
+pet grooming,pet grooming,job
+pet sitter,pet sitter,job
+pharmaceutical sales rep,pharmaceutical sales rep,job
+pharmacy assistant,pharmacy assistant,job
+photographer,photographer,job
+physical therapist,physical therapist,job
+physical therapists assistant,physical therapists assistant,job
+physical therapy aide,physical therapy aide,job
+physician,physician,job
+physician assistant,physician assistant,job
+pilot,pilot,job
+pipefitter,pipefitter,job
+plumber,plumber,job
+police officer,police officer,job
+political consultant,political consultant,job
+politician,politician,job
+portfolio compliance specialist,portfolio compliance specialist,job
+postal service worker,postal service worker,job
+postsecondary health specialties teacher,postsecondary health specialties teacher,job
+postsecondary nursing instructor,postsecondary nursing instructor,job
+pr manager,pr manager,job
+producer,producer,job
+producers and directors,producers and directors,job
+product manager,product manager,job
+professor,professor,job
+programmer,programmer,job
+project manager,project manager,job
+proofreader,proofreader,job
+proofreading,proofreading,job
+psychiatrist,psychiatrist,job
+psychologist,psychologist,job
+public relations,public relations,job
+public relations manager,public relations manager,job
+public relations officer,public relations officer,job
+public relations specialist,public relations specialist,job
+rancher,rancher,job
+real estate agent,real estate agent,job
+realtor,realtor,job
+recruiter,recruiter,job
+recruitment consultant,recruitment consultant,job
+recruitment officer,recruitment officer,job
+registered nurse,registered nurse,job
+relationship manager,relationship manager,job
+remote data entry,remote data entry,job
+research scientist,research scientist,job
+researcher,researcher,job
+restaurant manager,restaurant manager,job
+restaurant server,restaurant server,job
+retail stocker,retail stocker,job
+retail store manager,retail store manager,job
+roofer,roofer,job
+sales,sales,job
+sales associate,sales associate,job
+sales engineer,sales engineer,job
+sales lead,sales lead,job
+sales manager,sales manager,job
+sales representative,sales representative,job
+salesperson,salesperson,job
+scientist,scientist,job
+sculptor,sculptor,job
+security,security,job
+security trader,security trader,job
+server,server,job
+singer,singer,job
+social and community service,social and community service,job
+social media coordinator,social media coordinator,job
+social media manager,social media manager,job
+social media specialist,social media specialist,job
+social scientist,social scientist,job
+social worker,social worker,job
+software developer,software developer,job
+software engineer,software engineer,job
+software quality assurance analyst,software quality assurance analyst,job
+speech language pathologist,speech language pathologist,job
+speech pathologist,speech pathologist,job
+sports agent,sports agent,job
+steamfitter,steamfitter,job
+stocker,stocker,job
+surgical technologists,surgical technologists,job
+surveying and mapping technician,surveying and mapping technician,job
+systems engineer,systems engineer,job
+talent agent,talent agent,job
+talent manager,talent manager,job
+tattoo artist,tattoo artist,job
+teacher,teacher,job
+teaching,teaching,job
+tech recruiter,tech recruiter,job
+tech support,tech support,job
+technical roles,technical roles,job
+technical writer,technical writer,job
+technical writing,technical writing,job
+tester,tester,job
+therapist,therapist,job
+tour guide,tour guide,job
+tourism,tourism,job
+transcriptionist,transcriptionist,job
+translator,translator,job
+travel writer,travel writer,job
+truck driver,truck driver,job
+ui,ui,job
+ultrasound technician,ultrasound technician,job
+urban planner,urban planner,job
+ux,ux,job
+ux designer,ux designer,job
+veterinarian,veterinarian,job
+veterinary care assistant,veterinary care assistant,job
+video editor,video editor,job
+virtual assistant,virtual assistant,job
+warehouse associate,warehouse associate,job
+warehouse worker,warehouse worker,job
+web designer,web designer,job
+web developer,web developer,job
+wedding planner,wedding planner,job
+welder,welder,job
+writer,writer,job
+writer/author,writer/author,job
+x-ray technician,x-ray technician,job
