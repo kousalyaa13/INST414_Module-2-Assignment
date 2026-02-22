@@ -1,6 +1,9 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import pandas as pd
+import time
+from urllib.parse import urlparse
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
@@ -17,21 +20,31 @@ BAD_HEADINGS = {
 
 def is_job_heading(text: str) -> bool:
     text = text.strip()
+    lower = text.lower()
 
-    # basic length filter
+    # length
     if len(text) < 3 or len(text) > 60:
         return False
 
-    # remove headings we know are junk
-    if text in BAD_HEADINGS:
+    # throw out questions / section titles
+    if text.endswith("?"):
         return False
 
     # drop anything that sounds like a section label
-    bad_words = ["articles", "contact", "information", "follow", "related", "path"]
+    bad_words = ["guides", "event", "case",
+                 "diversity", "mission", "hub", "study"
+                 "articles", "blog", "contact", 
+                 "introvert", "extrovert", "career"
+                 "information", "follow", "related", 
+                 "path"]
     if any(w in text.lower() for w in bad_words):
         return False
 
     return True
+
+    # reject headings that look like full sentences
+    if lower.count(" ") > 5:
+        return False
 
 def scrape_jobs_from_url(url: str) -> list[str]:
     r = requests.get(url, headers=HEADERS, timeout=20)
@@ -39,7 +52,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
     soup = BeautifulSoup(r.text, "html.parser")
 
     jobs = []
-    for tag in soup.find_all(["h2", "h3"]):
+    for tag in soup.find_all(["h3"]):
         text = tag.get_text(strip=True)
         text = re.sub(r"^\d+[\.\)]\s*", "", text)  # remove numbering like "1. Job"
         if is_job_heading(text):
@@ -56,8 +69,9 @@ def scrape_jobs_from_url(url: str) -> list[str]:
 
     return unique_jobs
 
+
 if __name__ == "__main__":
-    url = "https://online.fit.edu/degrees/seven-career-paths-for-introverts/"
+    url = "https://www.multiverse.io/en-GB/blog/best-jobs-for-introverts"
     jobs = scrape_jobs_from_url(url)
 
     print("Jobs found:")
