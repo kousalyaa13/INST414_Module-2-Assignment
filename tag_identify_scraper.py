@@ -33,7 +33,7 @@ bad_headers = {
 }
 
 bad_words = [
-    "guide", "event", "case",
+    "guide", "case",
     "diversity", "mission", "hub", "study",
     "article", "blog", "contact",
     "introvert", "extrovert", "career",
@@ -112,7 +112,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
     soup = BeautifulSoup(r.text, "html.parser")
 
     jobs = []
-    for tag in soup.find_all(["b"]):
+    for tag in soup.find_all(["a"]):
         text = tag.get_text(strip=True)
         text = re.sub(r"^\d+[\.\)]\s*", "", text)  # remove numbering like "1. Job"
         if is_job_heading(text):
@@ -131,7 +131,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
 
 
 if __name__ == "__main__":
-    url = "https://careerlink.com/careerhub/best-jobs-for-extroverts/"
+    url = "https://www.ihire.com/resourcecenter/jobseeker/pages/5-high-paying-jobs-for-extroverts-that-also-fulfill-your-social-needs"
     jobs = scrape_jobs_from_url(url)
 
     print(f"  Found {len(jobs)} jobs")

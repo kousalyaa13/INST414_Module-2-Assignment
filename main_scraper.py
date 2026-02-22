@@ -36,7 +36,7 @@ bad_headers = {
 }
 
 bad_words = [
-    "guide", "event", "case",
+    "guide", "case",
     "diversity", "mission", "hub", "study",
     "article", "blog", "contact",
     "introvert", "extrovert", "career",
