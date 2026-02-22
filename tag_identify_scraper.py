@@ -39,7 +39,8 @@ bad_words = [
     "introvert", "extrovert", "career",
     "follow", "related",
     "path", "average", "salary", "job",
-    "quality", "quantity", "tip"
+    "quality", "quantity", "tip", "skill", 
+    "adaptability", "situation", "professional"
 ]
 
 BAD_PATTERN = re.compile(
@@ -111,7 +112,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
     soup = BeautifulSoup(r.text, "html.parser")
 
     jobs = []
-    for tag in soup.find_all(["h3"]):
+    for tag in soup.find_all(["b"]):
         text = tag.get_text(strip=True)
         text = re.sub(r"^\d+[\.\)]\s*", "", text)  # remove numbering like "1. Job"
         if is_job_heading(text):
@@ -130,7 +131,7 @@ def scrape_jobs_from_url(url: str) -> list[str]:
 
 
 if __name__ == "__main__":
-    url = "https://www.hhills.com/rehab-blog/jobs-for-social-anxiety/"
+    url = "https://careerlink.com/careerhub/best-jobs-for-extroverts/"
     jobs = scrape_jobs_from_url(url)
 
     print(f"  Found {len(jobs)} jobs")

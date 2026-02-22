@@ -11,7 +11,7 @@ HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
 }
 
-PROCESSED_FILE = "processed_urls.txt"
+PROCESSED_FILE = "extrovert_processed_urls.txt"
 OUTPUT_FILE = "job_edges_raw.csv"
 
 bad_headers = {
@@ -42,7 +42,8 @@ bad_words = [
     "introvert", "extrovert", "career",
     "follow", "related",
     "path", "average", "salary", "job",
-    "quality", "quantity", "tip"
+    "quality", "quantity", "tip", "skill", 
+    "adaptability", "situation", "professional"
 ]
 
 BAD_PATTERN = re.compile(
@@ -139,7 +140,7 @@ def scrape_jobs_from_url(url: str, tag_name: str) -> list[str]:
     return unique_jobs
 
 if __name__ == "__main__":
-    sources = pd.read_csv("sources.csv")
+    sources = pd.read_csv("extrovert_sources.csv")
     processed = load_processed_urls(PROCESSED_FILE)
 
     all_rows = []
