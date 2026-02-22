@@ -17,7 +17,8 @@ introvert,Graphic Designer,www.multiverse.io
 introvert,UX Designer,www.multiverse.io
 introvert,Cloud Engineer,www.multiverse.io
 introvert,Project Manager,www.multiverse.io
-introvert,Technical Writer/Technical writing,www.multiverse.io
+introvert,Technical Writing,www.multiverse.io
+introvert,Technical Writer,www.multiverse.io
 introvert,Systems Engineer,blog.steppingblocks.com
 introvert,Human Resources Manager,blog.steppingblocks.com
 introvert,Software Developer,blog.steppingblocks.com
@@ -55,38 +56,48 @@ introvert,Lawyer,www.coursera.org
 introvert,Psychologist,www.coursera.org
 introvert,Interpreter,www.coursera.org
 introvert,Commercial airline pilot,www.coursera.org
-introvert,Social scientist or researcher,www.coursera.org
+introvert,Researcher,www.coursera.org
+introvert,Social scientist,www.coursera.org
 introvert,Writer,www.coursera.org
-introvert,Archivist or librarian,timesofindia.indiatimes.com
+introvert,Archivist,timesofindia.indiatimes.com
+introvert,Librarian,timesofindia.indiatimes.com
 introvert,Data analyst,timesofindia.indiatimes.com
 introvert,Technical writer,timesofindia.indiatimes.com
-introvert,Therapist or counselor,timesofindia.indiatimes.com
+introvert,Therapist,timesofindia.indiatimes.com
+introvert,Counselor,timesofindia.indiatimes.com
 introvert,UX designer,timesofindia.indiatimes.com
 introvert,Research scientist,timesofindia.indiatimes.com
 introvert,Independent creator,timesofindia.indiatimes.com
-introvert,Web Developer or Digital Designer,www.sofi.com
-introvert,Farmer or Rancher,www.sofi.com
+introvert,Web Developer,www.sofi.com
+introvert,Digital Designer,www.sofi.com
+introvert,Farmer,www.sofi.com
+introvert,Rancher,www.sofi.com
 introvert,Psychologist,www.sofi.com
-introvert,"Plumber, Pipefitter, or Steamfitter",www.sofi.com
+introvert,Pipefitter,www.sofi.com
+introvert,Plumber,www.sofi.com
+introvert,Steamfitter,www.sofi.com
 introvert,Postal Service Worker,www.sofi.com
 introvert,Social Worker,www.sofi.com
 introvert,HVAC Technician,www.sofi.com
 introvert,Environmental Scientist,www.sofi.com
 introvert,Delivery Truck Driver,www.sofi.com
-introvert,Writer or Author,www.sofi.com
+introvert,Writer,www.sofi.com
+introvert,Author,www.sofi.com
 introvert,Librarian,www.sofi.com
 introvert,Physician,www.sofi.com
 introvert,Roofer,www.sofi.com
 introvert,Surveying and Mapping Technician,www.sofi.com
 introvert,Mechanic,www.sofi.com
 introvert,Bookkeeper,www.sofi.com
-introvert,Interpreter or Translator,www.sofi.com
-introvert,Software Quality Assurance Analyst or Tester,www.sofi.com
+introvert,Interpreter,www.sofi.com
+introvert,Translator,www.sofi.com
+introvert,Software Quality Assurance Analyst,www.sofi.com
+introvert,Tester,www.sofi.com
 introvert,Marketing Manager,www.sofi.com
 introvert,Photographer,www.sofi.com
 introvert,Proofreader,www.sofi.com
 introvert,Landscaper,www.sofi.com
-introvert,Physician Assistant (PA),www.sofi.com
+introvert,Physician Assistant,www.sofi.com
 introvert,Animal Trainer,www.sofi.com
 introvert,Medical Transcriptionist,www.sofi.com
 introvert,Floral Designer,www.sofi.com

@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 import re
+import os
+import unicodedata
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
