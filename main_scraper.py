@@ -5,10 +5,14 @@ import pandas as pd
 import time
 from urllib.parse import urlparse
 import os
+import unicodedata
 
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Educational Network Project)"
 }
+
+PROCESSED_FILE = "processed_urls.txt"
+OUTPUT_FILE = "job_edges_raw.csv"
 
 bad_headers = {
     "Related Articles",
@@ -39,6 +43,35 @@ BAD_PATTERN = re.compile(
     r"\b(" + "|".join(re.escape(w) + "s?" for w in bad_words) + r")\b",
     re.IGNORECASE
 )
+
+def load_processed_urls(path: str) -> set[str]:
+    if not os.path.exists(path):
+        return set()
+    with open(path, "r", encoding="utf-8") as f:
+        return {line.strip() for line in f if line.strip()}
+
+def mark_url_processed(path: str, url: str) -> None:
+    with open(path, "a", encoding="utf-8") as f:
+        f.write(url.strip() + "\n")
+
+def normalize_job_text(text: str) -> str:
+    """
+    Cleans common mojibake / weird whitespace.
+    Example: "VeterinarianÂ" or "VeterinarianÂ " -> "Veterinarian"
+    """
+    if text is None:
+        return ""
+    t = str(text)
+
+    # common bad characters from encoding issues
+    t = t.replace("\u00a0", " ")   # NBSP
+    t = t.replace("Â", "")         # mojibake artifact often before NBSP
+
+    # normalize unicode and collapse whitespace
+    t = unicodedata.normalize("NFKC", t)
+    t = " ".join(t.split())
+
+    return t.strip()
 
 def contains_bad_word(text: str) -> bool:
     return bool(BAD_PATTERN.search(text))
@@ -101,6 +134,8 @@ def scrape_jobs_from_url(url: str, tag_name: str) -> list[str]:
 
 if __name__ == "__main__":
     sources = pd.read_csv("sources.csv")
+    processed = load_processed_urls(PROCESSED_FILE)
+
     all_rows = []
 
     for _, row in sources.iterrows():
@@ -111,58 +146,42 @@ if __name__ == "__main__":
         if not url:
             continue
 
-        print(f"\nScraping: {url} (tag={tag_name})")
+        # skip old sources
+        if url in processed:
+            print(f"\nSkipping already-scraped: {url}")
+            continue
+
+        print(f"\nScraping NEW source: {url} (tag={tag_name})")
 
         try:
             jobs = scrape_jobs_from_url(url, tag_name)
 
             for job in jobs:
-                all_rows.append({
-                    "personality": label,
-                    "job": job,
-                    "source": urlparse(url).netloc
-                })
+                job_clean = normalize_job_text(job)
+                if job_clean:
+                    all_rows.append({
+                        "personality": label,
+                        "job": job_clean,
+                        "source": urlparse(url).netloc
+                    })
 
             print(f"  Found {len(jobs)} jobs")
+
+            # mark this URL as processed ONLY if scrape succeeded
+            processed.add(url)
+            mark_url_processed(PROCESSED_FILE, url)
 
         except Exception as e:
             print(f"  Error scraping {url}: {e}")
 
         time.sleep(1.5)
 
-    output_file = "job_edges_raw.csv"
+    # append only new scraped rows
+    if all_rows:
+        new_df = pd.DataFrame(all_rows).drop_duplicates()
 
-# after loop: build dataframe
-new_df = pd.DataFrame(all_rows).drop_duplicates()
-
-if os.path.exists(output_file):
-    existing_df = pd.read_csv(output_file, usecols=["personality", "job", "source"])
-
-    # build a key to detect duplicates
-    existing_keys = set(
-        existing_df["personality"].astype(str).str.lower().str.strip()
-        + "||" +
-        existing_df["job"].astype(str).str.lower().str.strip()
-        + "||" +
-        existing_df["source"].astype(str).str.lower().str.strip()
-    )
-
-    new_keys = (
-        new_df["personality"].astype(str).str.lower().str.strip()
-        + "||" +
-        new_df["job"].astype(str).str.lower().str.strip()
-        + "||" +
-        new_df["source"].astype(str).str.lower().str.strip()
-    )
-
-    to_add = new_df[~new_keys.isin(existing_keys)]
-
-    if len(to_add) > 0:
-        to_add.to_csv(output_file, mode="a", header=False, index=False)
-        print(f"\nAppended {len(to_add)} new rows to job_edges_raw.csv")
+        file_exists = os.path.exists(OUTPUT_FILE)
+        new_df.to_csv(OUTPUT_FILE, mode="a", header=not file_exists, index=False)
+        print(f"\nAppended {len(new_df)} rows to {OUTPUT_FILE}")
     else:
-        print("\nNo new rows to append (all duplicates).")
-
-else:
-    new_df.to_csv(output_file, index=False)
-    print("\nCreated job_edges_raw.csv")
+        print("\nNo new sources to scrape. Nothing appended.")
