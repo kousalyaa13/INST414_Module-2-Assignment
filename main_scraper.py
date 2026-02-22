@@ -27,7 +27,12 @@ bad_headers = {
     "Photostories",
     "TOI",
     "Visual Stories",
-    "Track your credit score with SoFi"
+    "Track your credit score with SoFi",
+    "Deep focus and concentration:",
+    "Thoughtful decision-making:",
+    "Strong listening skills:",
+    "Self-motivation:",
+    "Written communication:",
 }
 
 bad_words = [
@@ -36,7 +41,8 @@ bad_words = [
     "article", "blog", "contact",
     "introvert", "extrovert", "career",
     "follow", "related",
-    "path"
+    "path", "average", "salary", "job",
+    "quality", "quantity", "tip"
 ]
 
 BAD_PATTERN = re.compile(
@@ -54,24 +60,24 @@ def mark_url_processed(path: str, url: str) -> None:
     with open(path, "a", encoding="utf-8") as f:
         f.write(url.strip() + "\n")
 
+# cleans encoding issues and removed colons
 def normalize_job_text(text: str) -> str:
-    """
-    Cleans common mojibake / weird whitespace.
-    Example: "VeterinarianÂ" or "VeterinarianÂ " -> "Veterinarian"
-    """
     if text is None:
         return ""
+
     t = str(text)
 
-    # common bad characters from encoding issues
-    t = t.replace("\u00a0", " ")   # NBSP
-    t = t.replace("Â", "")         # mojibake artifact often before NBSP
+    # remove encoding artifacts
+    t = t.replace("\u00a0", " ")   # non-breaking space
+    t = t.replace("Â", "")         # mojibake artifact
 
-    # normalize unicode and collapse whitespace
+    # normalize unicode
     t = unicodedata.normalize("NFKC", t)
-    t = " ".join(t.split())
 
-    return t.strip()
+    # collapse whitespace
+    t = " ".join(t.split()).strip()
+
+    return t
 
 def contains_bad_word(text: str) -> bool:
     return bool(BAD_PATTERN.search(text))
