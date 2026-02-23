@@ -4,3 +4,9 @@ This project analyzes how online career advice differs for introverts and extrov
 
 Read the full Medium post here:  
 👉 [https://medium.com/@kousalyapotti/a-network-analysis-of-introvert-vs-extrovert-career-recommendations-5ec2e7f8751d]
+
+## Tools Used
+- Python (requests, BeautifulSoup, pandas, os, re, unicode, urlparse)
+- RapidFuzz (fuzzy matching)
+- NetworkX
+- Gephi (network visualization)
