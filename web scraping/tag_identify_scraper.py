@@ -12,24 +12,14 @@ PROCESSED_FILE = "processed_urls.txt"
 OUTPUT_FILE = "job_edges_raw.csv"
 
 bad_headers = {
-    "Related Articles",
-    "Contact",
-    "Information",
-    "Follow Us",
-    "Matching Careers",
-    "Character Traits",
-    "Educational Path",
-    "Attractive Career Options for Introverts",
-    "Trending Stories",
-    "Photostories",
-    "TOI",
-    "Visual Stories",
-    "Track your credit score with SoFi",
-    "Deep focus and concentration:",
-    "Thoughtful decision-making:",
-    "Strong listening skills:",
-    "Self-motivation:",
-    "Written communication:",
+    "Related Articles", "Contact", "Information",
+    "Follow Us", "Matching Careers", "Character Traits",
+    "Educational Path", "Attractive Career Options for Introverts",
+    "Trending Stories", "Photostories", "TOI",
+    "Visual Stories", "Track your credit score with SoFi",
+    "Deep focus and concentration:", "Thoughtful decision-making:",
+    "Strong listening skills:", "Self-motivation:",
+    "Written communication:", "Introversion Is an Asset"
 }
 
 bad_words = [
@@ -40,7 +30,7 @@ bad_words = [
     "follow", "related",
     "path", "average", "salary", "job",
     "quality", "quantity", "tip", "skill", 
-    "adaptability", "situation", "professional"
+    "adaptability", "situation", "professional", "FAQs"
 ]
 
 BAD_PATTERN = re.compile(
